@@ -17,20 +17,19 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane prefHeight="440.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="440.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="728.0">
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="755.0">
          <left>
-            <BorderPane prefHeight="428.0" prefWidth="185.0" BorderPane.alignment="CENTER">
+            <BorderPane prefHeight="414.0" prefWidth="196.0" BorderPane.alignment="CENTER">
                <center>
-                  <ListView prefHeight="365.0" prefWidth="194.0" BorderPane.alignment="CENTER" />
+                  <ListView prefHeight="354.0" prefWidth="235.0" BorderPane.alignment="CENTER" />
                </center>
                <bottom>
-                  <ToolBar BorderPane.alignment="CENTER">
+                  <ToolBar prefHeight="13.0" prefWidth="196.0" BorderPane.alignment="CENTER">
                      <items>
-                        <Button mnemonicParsing="false" text="Add New List" />
-                        <Button mnemonicParsing="false" text="Remove List" />
+                        <Button fx:id="addNewListButton" mnemonicParsing="false" text="Add New List" />
+                        <Button fx:id="removeSelectedListsButton" mnemonicParsing="false" text="Remove List(s)" />
                      </items>
                   </ToolBar>
                </bottom>
@@ -44,9 +43,9 @@
             </BorderPane>
          </left>
          <right>
-            <BorderPane prefHeight="400.0" prefWidth="624.0" BorderPane.alignment="CENTER">
+            <BorderPane prefHeight="414.0" prefWidth="578.0" BorderPane.alignment="CENTER">
                <top>
-                  <Label text="List Title" BorderPane.alignment="CENTER">
+                  <Label fx:id="currentListTitleLabel" text="List Title" BorderPane.alignment="CENTER">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -73,18 +72,18 @@
                            </opaqueInsets>
                         </Label>
                         <Label text="Due Date" GridPane.columnIndex="2" />
-                        <CheckBox mnemonicParsing="false" GridPane.rowIndex="1" />
-                        <CheckBox mnemonicParsing="false" GridPane.rowIndex="2" />
-                        <CheckBox mnemonicParsing="false" GridPane.rowIndex="3" />
-                        <Button mnemonicParsing="false" text="Remove" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <Button mnemonicParsing="false" text="Remove" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                        <Button mnemonicParsing="false" text="Remove" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                        <Label text="Item 1 Description" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label text="Item 1 Due Date" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Label text="Item 2 Description" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label text="Item 2 Due Date" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Label text="Item 3 Description" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label text="Item 3 Due Date" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <CheckBox fx:id="item1Checkbox" mnemonicParsing="false" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="item2Checkbox" mnemonicParsing="false" GridPane.rowIndex="2" />
+                        <CheckBox fx:id="item3Checkbox" mnemonicParsing="false" GridPane.rowIndex="3" />
+                        <Button fx:id="item1RemoveButton" mnemonicParsing="false" text="Remove" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Button fx:id="item2RemoveButton" mnemonicParsing="false" text="Remove" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Button fx:id="item3RemoveButton" mnemonicParsing="false" text="Remove" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label fx:id="item1DescriptionLabel" text="Item 1 Description" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="item1DueDateLabel" text="Item 1 Due Date" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="item2DescriptionLabel" text="Item 2 Description" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="item2DueDateLabel" text="Item 2 Due Date" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label fx:id="item3DescriptionLabel" text="Item 3 Description" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="item3DueDateLabel" text="Item 3 Due Date" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                      </children>
                   </GridPane>
                </bottom>
@@ -97,9 +96,8 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-                  <MenuItem mnemonicParsing="false" text="Save Selected List(s)" />
-                  <MenuItem mnemonicParsing="false" text="Load List(s)" />
-              <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem fx:id="saveSelectedListsMenuItem" mnemonicParsing="false" text="Save Selected List(s)" />
+                  <MenuItem fx:id="loadListsMenuItem" mnemonicParsing="false" text="Load List(s)" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
@@ -109,13 +107,13 @@
           </Menu>
             <Menu mnemonicParsing="false" text="View">
                <items>
-                  <RadioMenuItem mnemonicParsing="false" text="All items">
+                  <RadioMenuItem fx:id="viewAllItemsRadioMenuItem" mnemonicParsing="false" text="All items">
                      <toggleGroup>
                         <ToggleGroup fx:id="listViewModeToggleGroup" />
                      </toggleGroup>
                   </RadioMenuItem>
-                  <RadioMenuItem mnemonicParsing="false" text="Incomplete items only" toggleGroup="$listViewModeToggleGroup" />
-                  <RadioMenuItem mnemonicParsing="false" text="Completed items" toggleGroup="$listViewModeToggleGroup" />
+                  <RadioMenuItem fx:id="viewIncompleteItemsOnlyRadioMenuItem" mnemonicParsing="false" text="Incomplete items only" toggleGroup="$listViewModeToggleGroup" />
+                  <RadioMenuItem fx:id="viewCompletedItemsOnlyRadioMenuItem" mnemonicParsing="false" text="Completed items" toggleGroup="$listViewModeToggleGroup" />
                </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Help">
