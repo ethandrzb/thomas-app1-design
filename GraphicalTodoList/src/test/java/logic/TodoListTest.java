@@ -86,4 +86,14 @@ class TodoListTest
 
         // Assert complete ListItems from test data are not present in list returned by getIncompleteItems
     }
+
+    @Test
+    void canStoreAtLeast256Items()
+    {
+        // Algorithmically generate 260 ListItems
+
+        // Add all ListItems to TodoList
+
+        // Assert that all expected items are present and accessible
+    }
 }
