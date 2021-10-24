@@ -92,15 +92,6 @@ public class ApplicationController
         // Add new item to this TodoList
     }
 
-    // Stand-in method for dynamically created remove item buttons
-    @FXML
-    void removeItem1ButtonPressed(ActionEvent event)
-    {
-        // Get index of remove button pressed
-
-        // Remove ListItem in currently displayed TodoList at that index
-    }
-
     @FXML
     void addNewListButtonPressed(ActionEvent event)
     {
