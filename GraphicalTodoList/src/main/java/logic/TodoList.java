@@ -14,7 +14,7 @@ public class TodoList
         title = "";
         listItems = new ArrayList<>();
 
-        // Add empty first item to list
+        // Add empty first item to list?
     }
 
     public TodoList(String title, List<ListItem> listItems)
