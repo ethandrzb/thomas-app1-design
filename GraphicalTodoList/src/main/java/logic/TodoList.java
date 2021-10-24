@@ -1,6 +1,7 @@
 package logic;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TodoList
@@ -12,6 +13,8 @@ public class TodoList
     {
         title = "";
         listItems = new ArrayList<>();
+
+        // Add empty first item to list
     }
 
     public TodoList(String title, List<ListItem> listItems)
@@ -47,7 +50,7 @@ public class TodoList
     public List<ListItem> getListItems()
     {
         // return all listItems
-        return null;
+        return Collections.emptyList();
     }
 
     public List<ListItem> getCompletedItems()
@@ -58,7 +61,7 @@ public class TodoList
 
         // Return this list
 
-        return null;
+        return Collections.emptyList();
     }
 
     public List<ListItem> getIncompleteItems()
@@ -69,6 +72,6 @@ public class TodoList
 
         // Return this list
 
-        return null;
+        return Collections.emptyList();
     }
 }

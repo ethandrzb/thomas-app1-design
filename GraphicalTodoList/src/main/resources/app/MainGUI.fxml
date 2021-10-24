@@ -18,19 +18,19 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="440.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="440.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ApplicationController">
    <center>
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="755.0">
          <left>
             <BorderPane prefHeight="414.0" prefWidth="196.0" BorderPane.alignment="CENTER">
                <center>
-                  <ListView prefHeight="354.0" prefWidth="235.0" BorderPane.alignment="CENTER" />
+                  <ListView fx:id="availableListView" prefHeight="354.0" prefWidth="235.0" BorderPane.alignment="CENTER" />
                </center>
                <bottom>
                   <ToolBar prefHeight="13.0" prefWidth="196.0" BorderPane.alignment="CENTER">
                      <items>
-                        <Button fx:id="addNewListButton" mnemonicParsing="false" text="Add New List" />
-                        <Button fx:id="removeSelectedListsButton" mnemonicParsing="false" text="Remove List(s)" />
+                        <Button fx:id="addNewListButton" mnemonicParsing="false" onAction="#addNewListButtonPressed" text="Add New List" />
+                        <Button fx:id="removeSelectedListsButton" mnemonicParsing="false" onAction="#removeSelectedListsButtonPressed" text="Remove List(s)" />
                      </items>
                   </ToolBar>
                </bottom>
@@ -76,7 +76,7 @@
                         <CheckBox fx:id="item1Checkbox" mnemonicParsing="false" GridPane.rowIndex="1" />
                         <CheckBox fx:id="item2Checkbox" mnemonicParsing="false" GridPane.rowIndex="2" />
                         <CheckBox fx:id="item3Checkbox" mnemonicParsing="false" GridPane.rowIndex="3" />
-                        <Button fx:id="item1RemoveButton" mnemonicParsing="false" text="Remove" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Button fx:id="item1RemoveButton" mnemonicParsing="false" onAction="#removeItem1ButtonPressed" text="Remove" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                         <Button fx:id="item2RemoveButton" mnemonicParsing="false" text="Remove" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                         <Button fx:id="item3RemoveButton" mnemonicParsing="false" text="Remove" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                         <Label fx:id="item1DescriptionLabel" text="Item 1 Description" GridPane.columnIndex="1" GridPane.rowIndex="1" />

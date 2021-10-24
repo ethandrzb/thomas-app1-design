@@ -1,19 +1,23 @@
 package app;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.RadioMenuItem;
 import javafx.scene.control.ToggleGroup;
 
-public class ApplicationController
-{
+public class ApplicationController {
 
     @FXML
     private Button addNewListButton;
+
+    @FXML
+    private ListView<?> availableListView;
 
     @FXML
     private Label currentListTitleLabel;
@@ -74,5 +78,20 @@ public class ApplicationController
 
     @FXML
     private RadioMenuItem viewIncompleteItemsOnlyRadioMenuItem;
+
+    @FXML
+    void addNewListButtonPressed(ActionEvent event) {
+
+    }
+
+    @FXML
+    void removeItem1ButtonPressed(ActionEvent event) {
+
+    }
+
+    @FXML
+    void removeSelectedListsButtonPressed(ActionEvent event) {
+
+    }
 
 }
