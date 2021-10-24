@@ -3,6 +3,7 @@ package app;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.RadioMenuItem;
@@ -24,7 +25,7 @@ public class ApplicationController
     private Label item1DescriptionLabel;
 
     @FXML
-    private Label item1DueDateLabel;
+    private DatePicker item1DueDatePicker;
 
     @FXML
     private Button item1RemoveButton;
@@ -36,7 +37,7 @@ public class ApplicationController
     private Label item2DescriptionLabel;
 
     @FXML
-    private Label item2DueDateLabel;
+    private DatePicker item2DueDatePicker;
 
     @FXML
     private Button item2RemoveButton;
@@ -48,7 +49,7 @@ public class ApplicationController
     private Label item3DescriptionLabel;
 
     @FXML
-    private Label item3DueDateLabel;
+    private DatePicker item3DueDatePicker;
 
     @FXML
     private Button item3RemoveButton;

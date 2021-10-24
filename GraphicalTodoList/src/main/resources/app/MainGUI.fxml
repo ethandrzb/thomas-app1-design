@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
@@ -79,11 +80,11 @@
                         <Button fx:id="item2RemoveButton" mnemonicParsing="false" text="Remove" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                         <Button fx:id="item3RemoveButton" mnemonicParsing="false" text="Remove" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                         <Label fx:id="item1DescriptionLabel" text="Item 1 Description" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label fx:id="item1DueDateLabel" text="Item 1 Due Date" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                         <Label fx:id="item2DescriptionLabel" text="Item 2 Description" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label fx:id="item2DueDateLabel" text="Item 2 Due Date" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                         <Label fx:id="item3DescriptionLabel" text="Item 3 Description" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label fx:id="item3DueDateLabel" text="Item 3 Due Date" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <DatePicker fx:id="item1DueDatePicker" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <DatePicker fx:id="item2DueDatePicker" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <DatePicker fx:id="item3DueDatePicker" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                      </children>
                   </GridPane>
                </bottom>
