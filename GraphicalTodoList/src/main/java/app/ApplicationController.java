@@ -180,4 +180,11 @@ public class ApplicationController
 
         // Add listener to availableListView to change the list shown on the right to match the currently selected list
     }
+
+    public void addNewListItemButtonPressed(ActionEvent actionEvent)
+    {
+        // Get reference to currently selected TodoList
+
+        // Add new item to this list
+    }
 }
