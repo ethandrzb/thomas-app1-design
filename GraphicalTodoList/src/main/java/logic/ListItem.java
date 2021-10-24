@@ -22,6 +22,13 @@ public class ListItem
         this.dueDate = dueDate;
     }
 
+    public ListItem(boolean itemCompleted, String description)
+    {
+        this.itemCompleted = itemCompleted;
+        this.description = description;
+        this.dueDate = null;
+    }
+
     public void setItemCompleted(boolean itemCompleted)
     {
         // update itemCompleted
