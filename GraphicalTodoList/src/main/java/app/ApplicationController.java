@@ -85,7 +85,7 @@ public class ApplicationController
     private RadioMenuItem viewIncompleteItemsOnlyRadioMenuItem;
 
     @FXML
-    void addNewItemButtonPressed(ActionEvent actionEvent)
+    public void addNewItemButtonPressed(ActionEvent actionEvent)
     {
         // Get reference to currently selected TodoList
 
@@ -93,13 +93,13 @@ public class ApplicationController
     }
 
     @FXML
-    void addNewListButtonPressed(ActionEvent event)
+    public void addNewListButtonPressed(ActionEvent event)
     {
         // Create blank TodoList and add it to the list of available lists
     }
 
     @FXML
-    void removeSelectedListsButtonPressed(ActionEvent event)
+    public void removeSelectedListsButtonPressed(ActionEvent event)
     {
         // Get list of selected TodoLists in ListView
 
