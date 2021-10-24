@@ -91,7 +91,7 @@
                         </GridPane>
                      </content>
                   </ScrollPane>
-                  <Button fx:id="addItemButton" alignment="CENTER" mnemonicParsing="false" onAction="#addNewListItemButtonPressed" text="Add Item" />
+                  <Button fx:id="addItemButton" alignment="CENTER" mnemonicParsing="false" onAction="#addNewItemButtonPressed" text="Add Item" />
                </children>
                <padding>
                   <Insets bottom="5.0" top="5.0" />

@@ -85,23 +85,39 @@ public class ApplicationController
     private RadioMenuItem viewIncompleteItemsOnlyRadioMenuItem;
 
     @FXML
-    void addNewListButtonPressed(ActionEvent event) {
+    void addNewItemButtonPressed(ActionEvent actionEvent)
+    {
+        // Get reference to currently selected TodoList
 
+        // Add new item to this TodoList
+    }
+
+    // Stand-in method for dynamically created remove item buttons
+    @FXML
+    void removeItem1ButtonPressed(ActionEvent event)
+    {
+        // Get index of remove button pressed
+
+        // Remove ListItem in currently displayed TodoList at that index
     }
 
     @FXML
-    void removeItem1ButtonPressed(ActionEvent event) {
-
+    void addNewListButtonPressed(ActionEvent event)
+    {
+        // Create blank TodoList and add it to the list of available lists
     }
 
     @FXML
-    void removeSelectedListsButtonPressed(ActionEvent event) {
+    void removeSelectedListsButtonPressed(ActionEvent event)
+    {
+        // Get list of selected TodoLists in ListView
 
+        // Remove them
     }
 
     public void viewAllListItemsRadioMenuItemSelected(ActionEvent actionEvent)
     {
-        // Get all listItems from currently selected list
+        // Get all listItems from currently displayed list
 
         // Generate GridPane from list items
 
@@ -110,7 +126,7 @@ public class ApplicationController
 
     public void viewIncompleteItemsOnlyRadioMenuItemSelected(ActionEvent actionEvent)
     {
-        // Get all incomplete listItems from currently selected list
+        // Get all incomplete listItems from currently displayed list
 
         // Generate GridPane from list items
 
@@ -119,7 +135,7 @@ public class ApplicationController
 
     public void viewCompletedItemsOnlyRadioMenuItemSelected(ActionEvent actionEvent)
     {
-        // Get all completed listItems from currently selected list
+        // Get all completed listItems from currently displayed list
 
         // Generate GridPane from list items
 
@@ -128,7 +144,7 @@ public class ApplicationController
 
     public void saveSelectedListsMenuItemSelected(ActionEvent actionEvent)
     {
-        // Get list of currently selected items in list selector
+        // Get list of currently selected items in ListView
 
         // Open a FileChooser so the user can specify where the selected TodoLists should be saved
 
@@ -139,7 +155,9 @@ public class ApplicationController
     {
         // Open a FileChooser so the user can specify from where the TodoLists should be loaded
 
-        //
+        // Load lists from file
+
+        // Add loaded lists to currently loaded lists
     }
 
     private GridPane todoListToGridPane(List<ListItem> items)
@@ -179,12 +197,5 @@ public class ApplicationController
         // Add listener to availableListView to update it whenever the available list changes
 
         // Add listener to availableListView to change the list shown on the right to match the currently selected list
-    }
-
-    public void addNewListItemButtonPressed(ActionEvent actionEvent)
-    {
-        // Get reference to currently selected TodoList
-
-        // Add new item to this list
     }
 }
