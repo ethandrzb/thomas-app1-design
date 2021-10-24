@@ -10,8 +10,13 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.RadioMenuItem;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.GridPane;
+import logic.ListItem;
 
-public class ApplicationController {
+import java.util.List;
+
+public class ApplicationController
+{
 
     @FXML
     private Button addNewListButton;
@@ -94,4 +99,85 @@ public class ApplicationController {
 
     }
 
+    public void viewAllListItemsRadioMenuItemSelected(ActionEvent actionEvent)
+    {
+        // Get all listItems from currently selected list
+
+        // Generate GridPane from list items
+
+        // Attach GridPane to scene graph
+    }
+
+    public void viewIncompleteItemsOnlyRadioMenuItemSelected(ActionEvent actionEvent)
+    {
+        // Get all incomplete listItems from currently selected list
+
+        // Generate GridPane from list items
+
+        // Attach GridPane to scene graph
+    }
+
+    public void viewCompletedItemsOnlyRadioMenuItemSelected(ActionEvent actionEvent)
+    {
+        // Get all completed listItems from currently selected list
+
+        // Generate GridPane from list items
+
+        // Attach GridPane to scene graph
+    }
+
+    public void saveSelectedListsMenuItemSelected(ActionEvent actionEvent)
+    {
+        // Get list of currently selected items in list selector
+
+        // Open a FileChooser so the user can specify where the selected TodoLists should be saved
+
+        // Save these TodoList objects to that file
+    }
+
+    public void loadListsMenuItemSelected(ActionEvent actionEvent)
+    {
+        // Open a FileChooser so the user can specify from where the TodoLists should be loaded
+
+        //
+    }
+
+    private GridPane todoListToGridPane(List<ListItem> items)
+    {
+        // Create new (n + 1) by 4 GridPane where n is the number of listItems in items
+
+        // Add Label with text "Description" to Row 0, Column 1
+
+        // Add Label with text "Due Date" to Row 0, Column 2
+
+        // For each ListItem in items
+            // Add Checkbox to Column 0
+            // Add description Label to Column 1
+            // Add DatePicker to Column 2
+            // Add remove Button to Column 3
+
+        return null;
+    }
+
+    private void updateSceneGraph(GridPane gp)
+    {
+        // Get current scene graph
+
+        // Discard GridPane of currently displayed list
+
+        // Attach new GridPane to scene graph
+
+        // Execute changes/cleanup
+    }
+
+    public void initialize()
+    {
+        // Select viewAllListItemsRadioMenuItem by default
+
+        // Initialize availableListView to empty list
+
+        // Add listener to availableListView to update it whenever the available list changes
+
+        // Add listener to availableListView to change the list shown on the right to match the currently selected list
+    }
 }

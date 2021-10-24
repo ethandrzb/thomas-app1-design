@@ -97,8 +97,8 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-                  <MenuItem fx:id="saveSelectedListsMenuItem" mnemonicParsing="false" text="Save Selected List(s)" />
-                  <MenuItem fx:id="loadListsMenuItem" mnemonicParsing="false" text="Load List(s)" />
+                  <MenuItem fx:id="saveSelectedListsMenuItem" mnemonicParsing="false" onAction="#saveSelectedListsMenuItemSelected" text="Save Selected List(s)" />
+                  <MenuItem fx:id="loadListsMenuItem" mnemonicParsing="false" onAction="#loadListsMenuItemSelected" text="Load List(s)" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
@@ -108,13 +108,13 @@
           </Menu>
             <Menu mnemonicParsing="false" text="View">
                <items>
-                  <RadioMenuItem fx:id="viewAllItemsRadioMenuItem" mnemonicParsing="false" text="All items">
+                  <RadioMenuItem fx:id="viewAllItemsRadioMenuItem" mnemonicParsing="false" onAction="#viewAllListItemsRadioMenuItemSelected" text="All items">
                      <toggleGroup>
                         <ToggleGroup fx:id="listViewModeToggleGroup" />
                      </toggleGroup>
                   </RadioMenuItem>
-                  <RadioMenuItem fx:id="viewIncompleteItemsOnlyRadioMenuItem" mnemonicParsing="false" text="Incomplete items only" toggleGroup="$listViewModeToggleGroup" />
-                  <RadioMenuItem fx:id="viewCompletedItemsOnlyRadioMenuItem" mnemonicParsing="false" text="Completed items" toggleGroup="$listViewModeToggleGroup" />
+                  <RadioMenuItem fx:id="viewIncompleteItemsOnlyRadioMenuItem" mnemonicParsing="false" onAction="#viewIncompleteItemsOnlyRadioMenuItemSelected" text="Incomplete items only" toggleGroup="$listViewModeToggleGroup" />
+                  <RadioMenuItem fx:id="viewCompletedItemsOnlyRadioMenuItem" mnemonicParsing="false" onAction="#viewCompletedItemsOnlyRadioMenuItemSelected" text="Completed items" toggleGroup="$listViewModeToggleGroup" />
                </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Help">

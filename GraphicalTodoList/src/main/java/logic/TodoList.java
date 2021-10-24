@@ -38,7 +38,7 @@ public class TodoList
     {
         // Create new ListItem object with default parameters
 
-        // Add this object to ListItems
+        // Add this object to listItems
     }
 
     // Return boolean to indicate success?
