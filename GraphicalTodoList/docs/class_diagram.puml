@@ -10,27 +10,27 @@ class Application
 +class ApplicationController
 {
 
-    -Button addNewListButton;
+    -Button addNewListButton
 
-    -ListView<?> availableListView;
+    -ListView<?> availableListView
 
-    -Label currentListTitleLabel;
+    -Label currentListTitleLabel
 
-    -CheckBox item1Checkbox;
+    -CheckBox item1Checkbox
 
-    -ToggleGroup listViewModeToggleGroup;
+    -ToggleGroup listViewModeToggleGroup
 
-    -MenuItem loadListsMenuItem;
+    -MenuItem loadListsMenuItem
 
-    -Button removeSelectedListsButton;
+    -Button removeSelectedListsButton
 
-    -MenuItem saveSelectedListsMenuItem;
+    -MenuItem saveSelectedListsMenuItem
 
-    -RadioMenuItem viewAllItemsRadioMenuItem;
+    -RadioMenuItem viewAllItemsRadioMenuItem
 
-    -RadioMenuItem viewCompletedItemsOnlyRadioMenuItem;
+    -RadioMenuItem viewCompletedItemsOnlyRadioMenuItem
 
-    -RadioMenuItem viewIncompleteItemsOnlyRadioMenuItem;
+    -RadioMenuItem viewIncompleteItemsOnlyRadioMenuItem
 
     +void addNewItemButtonPressed(ActionEvent actionEvent)
 
@@ -57,9 +57,9 @@ class Application
 
 +class ListItem
 {
-    -boolean itemCompleted;
-    -String description;
-    -LocalDate dueDate;
+    -boolean itemCompleted
+    -String description
+    -LocalDate dueDate
 
     +ListItem()
 
@@ -82,8 +82,8 @@ class Application
 
 +class TodoList
 {
-    -String title;
-    -final ArrayList<ListItem> listItems;
+    -String title
+    -final ArrayList<ListItem> listItems
 
     +TodoList()
 
