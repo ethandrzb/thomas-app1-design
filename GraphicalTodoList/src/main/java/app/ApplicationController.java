@@ -3,8 +3,6 @@ package app;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MenuItem;
@@ -27,42 +25,6 @@ public class ApplicationController
 
     @FXML
     private Label currentListTitleLabel;
-
-    @FXML
-    private CheckBox item1Checkbox;
-
-    @FXML
-    private Label item1DescriptionLabel;
-
-    @FXML
-    private DatePicker item1DueDatePicker;
-
-    @FXML
-    private Button item1RemoveButton;
-
-    @FXML
-    private CheckBox item2Checkbox;
-
-    @FXML
-    private Label item2DescriptionLabel;
-
-    @FXML
-    private DatePicker item2DueDatePicker;
-
-    @FXML
-    private Button item2RemoveButton;
-
-    @FXML
-    private CheckBox item3Checkbox;
-
-    @FXML
-    private Label item3DescriptionLabel;
-
-    @FXML
-    private DatePicker item3DueDatePicker;
-
-    @FXML
-    private Button item3RemoveButton;
 
     @FXML
     private ToggleGroup listViewModeToggleGroup;
